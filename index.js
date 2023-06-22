@@ -72,7 +72,6 @@ async function main () {
       headless: true,
     });
     const page = await browser.newPage();
-    // await page.setViewportSize();
     await Promise.all([
       injectAnimationDisabler(page),
       page.goto(`file://${outputFilePath}`),
